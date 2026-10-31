@@ -15,13 +15,21 @@ def main():
             "draft": "",
             "critique": "",
             "final_answer": "",
+            "approved": False,
+            "revision_count": 0,
         }
     )
 
-    print("\nRESEARCH\n", result["research_notes"])
-    print("\nDRAFT\n", result["draft"])
-    print("\nCRITIC\n", result["critique"])
-    print("\nFINAL\n", result["final_answer"])
+    print("\n--- RESEARCH NOTES ---")
+    print(result.get("research_notes", ""))
+
+    print("\n--- CRITIC EVALUATION ---")
+    print(f"Approved: {result.get('approved')}")
+    print(f"Feedback: {result.get('critique')}")
+    print(f"Revisions: {result.get('revision_count')}")
+
+    print("\n--- FINAL ANSWER ---")
+    print(result.get("final_answer", ""))
 
 
 if __name__ == "__main__":

@@ -7,3 +7,5 @@ class TeamState(TypedDict):
     draft: str
     critique: str
     final_answer: str
+    approved: bool
+    revision_count: int
